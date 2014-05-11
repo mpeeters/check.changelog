@@ -34,6 +34,13 @@ setup(name='check.changelog',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
+          'docutils',
           'setuptools',
+          'zest.releaser',
           # -*- Extra requirements: -*-
-      ])
+      ],
+      entry_points={
+          'console_scripts': [
+              'check-changelog = check.changelog.script:main',
+          ]
+      })
